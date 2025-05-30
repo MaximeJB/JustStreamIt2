@@ -1,0 +1,281 @@
+    body {
+      background-color: #f8f9fa;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .main-header {
+      background-color: #61787F;
+      padding: 1rem 2rem;
+      width: 837px;
+      min-height: 122px;
+      border-width: 1px;
+      border-color: #000;
+      position: relative;
+      width: 75%;
+      margin: 20px auto;
+      display:flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .main-header .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    
+    
+    .main-header .navbar-brand img {
+      width: 127px;
+      height: 94px;
+    }
+
+    /* vidéos a la demande txt */
+    .main-header .navbar-text {
+      width: 514px;
+      height: 51px;
+      font-family: 'Oswald';
+      font-size: 40px;
+      color: #fff;
+      font-weight: 300;
+      line-height: 100%;
+      margin-left: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+    }
+
+    section { margin-bottom: 2rem; }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    
+    .best-film-card {
+      border: 4px solid #000;
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 0.5rem;
+    }
+    .best-film-card .film-poster {
+      max-width: 200px;
+      margin-right: 2rem;
+      border-radius: 0.25rem;
+    }
+    .best-film-card .film-info h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .best-film-card .film-info p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+    .best-film-card .btn-details {
+      background-color: #e30613;
+      font-family: 'Oswald', sans-serif;
+      color: #fff;
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border: none;
+      position:relative;
+      width: auto;
+    }
+    .best-film-card .btn-details:hover {
+      background-color: #c0050f;
+    }
+
+    
+    .rated-grid {
+      /* mobile first */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .rated-grid .rated-card:nth-child(n+7) {
+    display: none;
+    }
+
+    .rated-grid.expanded .rated-card {
+      display: block !important;
+    }
+
+    @media (min-width: 576px) {
+      .rated-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .rated-grid .rated-card:nth-child(n+5) {
+        display: none;
+      }
+      .rated-grid.expanded .rated-card {
+        display: block;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .rated-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .rated-grid .rated-card {
+        display: block;
+      }
+
+      .rated-grid .rated-card:nth-child(n+5) {
+        display: block;
+      }
+      
+      .rated-grid .rated-card:nth-child(n+7) {
+        display: none;
+      }
+
+      .rated-grid.expanded .rated-card {
+        display: block;
+      }
+    }
+
+    .rated-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .rated-card img {
+      width: 100%;
+      display: block;
+      transition: transform .3s;
+    }
+    .rated-card:hover img {
+      transform: scale(1.05);
+    }
+    .rated-overlay {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 20px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* opacité 50% */
+      display: block;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .rated-card:hover .rated-overlay {
+      opacity: 1;
+    }
+    .rated-overlay .title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 24px; 
+      line-height: 100%;
+      letter-spacing: 0;
+      margin: 0;
+      color: #fff;
+      text-align: center;
+    }
+    .rated-overlay .btn {
+
+      width: 81.97px;
+      height: 25.3px;
+      padding: 2px 4px;
+      border: none;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-family: sans-serif;
+      gap: 10px;
+      background: #2D2C2C;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .rated-overlay .btn:hover {
+      background: #2D2C2C !important;
+      transform: none;
+    }
+
+    
+    .placeholder-box {
+      background-color: #e9ecef;
+      height: 150px;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      font-style: italic;
+    }
+
+  
+    .filter-form {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .filter-form .form-select {
+      display: inline-block;
+      width: auto;
+      margin: 0 1rem;
+    }
+    .filter-form .selected-badge {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 0.25rem;
+    }
+
+    
+    @media (max-width: 768px) {
+      .best-film-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .best-film-card .film-poster {
+        margin-bottom: 1rem;
+      }
+      .best-film-card .film-info h3 {
+        font-size: 1.75rem;
+      }
+    }
+
+.show-more-btn {
+  font-family: 'Oswald', sans-serif;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  align-items: center;
+  background-color: #e30613;
+  color: #ffffff;
+  font-weight: 500;
+  width: 214px;
+  height: 36px;
+  border-radius: 25px;
+  padding-top: 2px;
+  padding-right:  4px; 
+  padding-bottom: 2px;
+  padding-left: 4px;
+  gap: 10px;
+  text-decoration: none;
+  margin-top: 1.0rem
+  ;
+}
+
+.show-more-btn:hover {
+  text-decoration: underline;
+}
