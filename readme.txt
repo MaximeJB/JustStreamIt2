@@ -1,6 +1,7 @@
-# JustStreamIt - Interface Web de Films
+# JustStreamIt - Interface Web de Film
 
 #### Description du Projet:
+
 **JustStreamIt** est une interface web développée dans le cadre d'une formation en développement front-end (**Projet #6 OpenClassroom**).
 Cette application permet aux utilisateurs de découvrir et explorer une vaste collection de films grâce à une interface responsive.
 L'objectif principal était de créer une vitrine de films attractive qui présente les contenus les mieux notés selon différentes catégories, tout en offrant une 
